@@ -170,7 +170,7 @@ export default function Sidebar() {
               item={{
                 name: "Management Users",
                 icon: User,
-                href: "/settings/user",
+                href: "/user",
                 color: "text-slate-400",
               }}
               isActive={pathname === "/settings/users"}
