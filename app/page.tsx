@@ -23,7 +23,12 @@ const DUMMY_USERS = [
     role: "SATPAM",
     name: "Slamet Riyadi",
   },
-  { username: "ks", password: "123", role: "KS", name: "Drs. H. Mulyadi" },
+  {
+    username: "ks",
+    password: "123",
+    role: "KS",
+    name: "Dr. Lamijan, S.Pd., M.Si",
+  },
   { username: "tim", password: "123", role: "TIM", name: "Zulfa Fachruddin" },
 ];
 
@@ -83,13 +88,30 @@ export default function LoginPage() {
               </h1>
             </div>
 
-            <h2 className="text-4xl font-bold leading-tight mb-4">
-              Akses Sistem <br /> Internal Sekolah
+            <h2 className="text-4xl font-black leading-[1.1] mb-6 tracking-tight">
+              Tanggap, Aman, <br />
+              <span className="text-amber-400">Menghadapi</span> <br />
+              Gangguan External
             </h2>
-            <p className="text-emerald-100 text-lg opacity-80 max-w-xs leading-relaxed">
-              Silakan masuk untuk mengelola data kunjungan, verifikasi tamu, dan
-              monitoring arsip.
-            </p>
+            {/* DESKRIPSI: Penjelasan Visi */}
+            <div className="space-y-4 max-w-sm">
+              <p className="text-emerald-50 text-lg opacity-90 leading-relaxed font-medium">
+                Sistem manajemen keamanan sekolah terintegrasi untuk menciptakan
+                lingkungan pendidikan yang kondusif.
+              </p>
+
+              {/* Visual Poin untuk mempertegas akronim */}
+              <div className="flex flex-wrap gap-2 pt-2">
+                {["Tanggap", "Aman", "Monitoring", "External"].map((tag) => (
+                  <span
+                    key={tag}
+                    className="text-[10px] font-black bg-white/10 border border-white/20 px-3 py-1 rounded-full uppercase tracking-widest"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </div>
           </div>
 
           <div className="relative z-10 mt-12 p-6 bg-white/10 backdrop-blur-md rounded-2xl border border-white/20">
